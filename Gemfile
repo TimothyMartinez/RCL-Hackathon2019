@@ -1,9 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-
-ruby '~> 2.6.4'
-gem 'nio4r', '~> 2.5', '>= 2.5.1'
+ruby '2.6.4'
 
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
