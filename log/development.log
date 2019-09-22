@@ -57,3 +57,46 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 4118ms (Views: 4098.2ms | ActiveRecord: 2.4ms | Allocations: 1270492)
 
 
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/users/sign_up" for ::1 at 2019-09-22 15:53:27 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 215)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 124)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1868)
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 6682)
+
+
+Started POST "/users" for ::1 at 2019-09-22 15:53:48 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"5Zc9Tl6RDV9iDADA1ZNB+6ZwXC54OG63a+47HM+GayEI1EA/9UbHwd6iw7Uej1wZgVf6mRr8LcOaIZO0KKKwpQ==", "user"=>{"email"=>"user@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 225)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 77)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1269)
+Completed 200 OK in 130ms (Views: 8.1ms | ActiveRecord: 0.5ms | Allocations: 14580)
+
+
+Started POST "/users" for ::1 at 2019-09-22 15:53:58 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"kI8T4hmCgSVyGYJTiKwsvW+4Q2K05QK8oCIZi4SaFSHqzOwZFEhcTSzfxR5gnVaSfOz5Z+7F5PKv/seCZVF21w==", "user"=>{"email"=>"user@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user@email.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "user@email.com"], ["encrypted_password", "$2a$11$0WZ980NdEc7BKEUwHdq5D.bYjmdDliL/1MqMD/FK5ejCrq8eniRG."], ["created_at", "2019-09-22 19:53:58.958688"], ["updated_at", "2019-09-22 19:53:58.958688"]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 119ms (ActiveRecord: 3.6ms | Allocations: 7932)
+
+
+Started GET "/" for ::1 at 2019-09-22 15:53:58 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/timartin/.rvm/gems/ruby-2.6.3/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/timartin/.rvm/gems/ruby-2.6.3/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.6ms | Allocations: 199)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 1114)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
