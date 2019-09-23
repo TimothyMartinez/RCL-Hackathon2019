@@ -1,8 +1,8 @@
 {
   "application.js": "/packs/js/application-05bc83490fcade04d051.js",
   "application.js.map": "/packs/js/application-05bc83490fcade04d051.js.map",
-  "dashboard.js": "/packs/js/dashboard-197e6262dc90e99097a4.js",
-  "dashboard.js.map": "/packs/js/dashboard-197e6262dc90e99097a4.js.map",
+  "dashboard.js": "/packs/js/dashboard-e74fbc0ef178cab90355.js",
+  "dashboard.js.map": "/packs/js/dashboard-e74fbc0ef178cab90355.js.map",
   "entrypoints": {
     "application": {
       "js": [
@@ -14,11 +14,21 @@
     },
     "dashboard": {
       "js": [
-        "/packs/js/dashboard-197e6262dc90e99097a4.js"
+        "/packs/js/dashboard-e74fbc0ef178cab90355.js"
       ],
       "js.map": [
-        "/packs/js/dashboard-197e6262dc90e99097a4.js.map"
+        "/packs/js/dashboard-e74fbc0ef178cab90355.js.map"
+      ]
+    },
+    "hello-world-bundle": {
+      "js": [
+        "/packs/js/hello-world-bundle-b9cace2c642f58c6d646.js"
+      ],
+      "js.map": [
+        "/packs/js/hello-world-bundle-b9cace2c642f58c6d646.js.map"
       ]
     }
-  }
+  },
+  "hello-world-bundle.js": "/packs/js/hello-world-bundle-b9cace2c642f58c6d646.js",
+  "hello-world-bundle.js.map": "/packs/js/hello-world-bundle-b9cace2c642f58c6d646.js.map"
 }
