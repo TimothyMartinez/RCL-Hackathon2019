@@ -1,0 +1,18 @@
+body {
+  height: 100vh;
+  margin: 0;
+}
+
+.body {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.nav {
+  position: relative;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: blue;
+}
