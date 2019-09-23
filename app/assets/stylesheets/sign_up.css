@@ -1,0 +1,22 @@
+#sign_up_wrapper {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #0C214D;
+  border: solid 1px #FCBB13;
+  border-radius: 4px;
+  display: grid; 
+  place-items: center;
+  margin: 0 auto;
+  width: 300px;
+  color: #fff;
+  padding-bottom: 40px;
+}
+
+#sign_up_wrapper input {
+  border-radius: 4px;
+  outline: none;
+  border: none;
+}
+
+#suggestions_wrapper a{
+  color: #FCBB13;
+}
