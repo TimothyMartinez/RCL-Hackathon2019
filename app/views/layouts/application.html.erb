@@ -10,9 +10,10 @@
   </head>
 
   <body>
-    <%=link_to 'Sign In', new_user_session_path unless current_user%>
-    <%=link_to 'Sign Out', destroy_user_session_path if current_user%>
-
+    <div class='nav'>
+      <%=link_to 'Sign In', new_user_session_path unless current_user%>
+      <%=link_to 'Sign Out', destroy_user_session_path if current_user%>
+    </div>
     <%= yield %>
   </body>
 </html>
