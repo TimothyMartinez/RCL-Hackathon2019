@@ -1,4 +1,4 @@
-#passf_wrapper {
+#edit_pass {
   font-family: 'Montserrat', sans-serif;
   background-image: url(http://static.traveltek.net/uploaded/2016/12/1481555532.png);
   background-size: 68% 23%;
@@ -22,7 +22,7 @@
   align-items: center;
 }
 
-#passf_wrapper body {
+body {
   background-image: url(https://www.caribbeanportals.com/wp-content/uploads/2019/03/Royal-Caribbean-24.jpg); 
   background-repeat: no-repeat;
   background-size: cover;
@@ -30,12 +30,12 @@
   right: 0;
 }
 
-#passf_wrapper #heading {
+#edit_pass #heading {
   text-align: center;
   padding-top: 20px;
 }
 
-#passf_wrapper .actions input {
+#edit_pass .actions input {
   border: none;
   color: white;
   background-color: #71C5E8;
@@ -47,23 +47,20 @@
   font-size: 16px;
 }
 
-#passf_wrapper input {
+#edit_pass input {
   color: #fff;
   border-radius: 4px;
   outline: none;
   border: 1px solid #fff;
 }
 
-#passf_wrapper .inp_label {
+#edit_pass .inp_label {
   font-size: 10px;
-  padding-right: 10px;
+  padding: 15px 0 15px 0;
 }
 
-#passf_wrapper .field {
+#edit_pass .field {
   padding: 10px 0 10px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 #suggestions_wrapper a{
