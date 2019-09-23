@@ -4293,3 +4293,261 @@ Migrating to AddColumnsToUser (20190923024306)
   [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 >>>>>>> master
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20190922215107)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "name" varchar, "url" varchar, "job" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/" for ::1 at 2019-09-23 07:50:28 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.0) lib/active_record/migration.rb:587:in `check_pending!'
+activerecord (6.0.0) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.0) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (15.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (21.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20190922215107)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "name" varchar, "url" varchar, "job" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190922215107"]]
+  [1m[35m (17.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddColumnsToUser (20190923024306)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "users" ADD "first" varchar[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "second" varchar[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "third" varchar[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "fourth" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "fifth" varchar[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190923024306"]]
+  [1m[35m (14.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-09-23 11:50:41.753564"], ["updated_at", "2019-09-23 11:50:41.753564"]]
+  [1m[35m (13.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2019-09-23 07:50:50 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 28.9ms | Allocations: 11750)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 4032ms (Views: 4027.8ms | ActiveRecord: 0.5ms | Allocations: 1424390)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-09-23 07:51:06 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 674)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 4802)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 3504ms (Views: 3494.1ms | ActiveRecord: 0.0ms | Allocations: 27932)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-09-23 07:51:14 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"frgTySpKRV7PGvChUDCAbCHLkwbxAcI6A8yTiMNjyTPOpr9inlVHmbATDdxtICtKY6er/0yb4jCHGea2BynNyw==", "user"=>{"email"=>"gil@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "gil@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.2ms | Allocations: 2090)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"frgTySpKRV7PGvChUDCAbCHLkwbxAcI6A8yTiMNjyTPOpr9inlVHmbATDdxtICtKY6er/0yb4jCHGea2BynNyw==", "user"=>{"email"=>"gil@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 132)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1057)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 3554ms (Views: 3456.4ms | ActiveRecord: 0.0ms | Allocations: 13883)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-09-23 07:51:21 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"lNGIAKkTVa3I/cKIZEBQZw4zr0JNjfMdfg7HlCJal4EkzySrHQxXarf0P/VZUPtBTF+Xu/AX0xf627Kq5hCTeQ==", "user"=>{"email"=>"gil@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "gil@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.2ms | Allocations: 1880)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"lNGIAKkTVa3I/cKIZEBQZw4zr0JNjfMdfg7HlCJal4EkzySrHQxXarf0P/VZUPtBTF+Xu/AX0xf627Kq5hCTeQ==", "user"=>{"email"=>"gil@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 132)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1047)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 3488ms (Views: 3391.2ms | ActiveRecord: 0.0ms | Allocations: 13297)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-09-23 07:51:28 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"nxaAFZLVlBUBM0jQ0hJ0K6qGTarXgbGKqD7//URFC6UvCCy+JsqW0n46ta3vAt8N6Op1U2obkYAs64rDgA8PXQ==", "user"=>{"email"=>"gil@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "gil@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.1ms | Allocations: 1902)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"nxaAFZLVlBUBM0jQ0hJ0K6qGTarXgbGKqD7//URFC6UvCCy+JsqW0n46ta3vAt8N6Op1U2obkYAs64rDgA8PXQ==", "user"=>{"email"=>"gil@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 132)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1048)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 3576ms (Views: 3480.7ms | ActiveRecord: 0.0ms | Allocations: 13296)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-09-23 07:51:36 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"7C1clXH1/8tJww2OFuNmAeJ4HhyrrtI4hwsKp7LgR0dcM/A+xer9DDbK8PMr880noBQm5RY08jID3n+ZdqpDvw==", "user"=>{"email"=>"gil@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "gil@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.1ms | Allocations: 1892)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"7C1clXH1/8tJww2OFuNmAeJ4HhyrrtI4hwsKp7LgR0dcM/A+xer9DDbK8PMr880noBQm5RY08jID3n+ZdqpDvw==", "user"=>{"email"=>"gil@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 132)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1048)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 3609ms (Views: 3513.0ms | ActiveRecord: 0.0ms | Allocations: 13300)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-09-23 07:51:49 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"MYyvw6vwOybAOXo41ZN6PaFOljmDL4H1kzjUiocuFAyBkgNoH+854b8wh0Xog9Eb4yKuwD61of8X7aG0Q2QQ9A==", "user"=>{"email"=>"gil@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "gil@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.1ms | Allocations: 1892)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"MYyvw6vwOybAOXo41ZN6PaFOljmDL4H1kzjUiocuFAyBkgNoH+854b8wh0Xog9Eb4yKuwD61of8X7aG0Q2QQ9A==", "user"=>{"email"=>"gil@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 132)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1047)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 3514ms (Views: 3417.3ms | ActiveRecord: 0.0ms | Allocations: 13296)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-09-23 07:51:56 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.3ms | Allocations: 206)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 124)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2955)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 3479ms (Views: 3477.3ms | ActiveRecord: 0.0ms | Allocations: 16034)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/users/sign_up" for ::1 at 2019-09-23 07:54:22 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 209)
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 628)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 6.4ms | Allocations: 5971)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 4020ms (Views: 4007.5ms | ActiveRecord: 0.4ms | Allocations: 1408992)
+
+
