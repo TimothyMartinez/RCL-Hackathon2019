@@ -1,6 +1,6 @@
 #sign_up_wrapper {
   font-family: 'Montserrat', sans-serif;
-  background-color: #0C214D;
+  background-color: #1D1F54;
   border: solid 1px #FCBB13;
   border-radius: 4px;
   display: grid; 
@@ -9,6 +9,7 @@
   width: 300px;
   color: #fff;
   padding-bottom: 40px;
+  overflow-wrap: break-word;
 }
 
 #sign_up_wrapper input {
