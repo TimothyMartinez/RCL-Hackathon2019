@@ -1,2 +1,0 @@
-class IdealLocation < ApplicationRecord
-end
