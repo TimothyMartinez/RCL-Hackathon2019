@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_22_223334) do
+ActiveRecord::Schema.define(version: 2019_09_23_024306) do
 
   create_table "ideal_locations", force: :cascade do |t|
     t.string "first"
@@ -33,6 +33,11 @@ ActiveRecord::Schema.define(version: 2019_09_22_223334) do
     t.string "job"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "first"
+    t.string "second"
+    t.string "third"
+    t.string "fourth"
+    t.string "fifth"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
