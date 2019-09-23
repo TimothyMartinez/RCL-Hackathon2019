@@ -1,25 +1,28 @@
 class ApplicationController < ActionController::Base
-  before_action :configure_permitted_parameters, if: :devise_controller?
+  # before_action :configure_account_update_params, only: [:update]
 
-  def index
-    @locations = ["Miami", "Sydney", "Brisbane", "Singapore", "Perth", "Auckland", "Melbourne", "Honolulu", "Orlando", "Fort Lauderdale", "Seattle"]
-  end
+  # def index
+  #   @locations = ["Miami", "Sydney", "Brisbane", "Singapore", "Perth", "Auckland", "Melbourne", "Honolulu", "Orlando", "Fort Lauderdale", "Seattle"]
+  # end
 
-  def edit
-    @User = current_user
-  end
+  # def edit
+  # end
 
-  def update
-    current_user.update(first: params[:first], second: params[:second], third: params[:third], fourth: params[:fourth], fifth: params[:fifth])
-    # redirect_to root_path
-  end
+  # def update
+  #   @user = User.find(params[:id])
+  #   # @user.update!(configure_account_update_params)
+  #   # redirect_to root_path
+  #   @user.update(configure_account_update_params)
+  #   # redirect_to root_path
+  # end
 
-  def destroy
-  end
+  # def destroy
+  # end
 
-  protected
+  # protected
 
-  def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :url, :job, :first, :second, :third, :fourth, :fifth])
-  end
+  # def configure_account_update_params
+  #   devise_parameter_sanitizer.permit(:account_update, keys: [:first, :second, :third, :fourth, :fifth])
+  # end
+
 end
