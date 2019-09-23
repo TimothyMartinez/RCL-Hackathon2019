@@ -1,16 +1,16 @@
 <div id="log_in_wrapper">
-  <h2>LOG IN</h2>
+  <h2 id="heading">LOG IN</h2>
 
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     
 
     <div class="field">
-      <%= f.label :email %><br />
+      <span class="inp_label"><%= f.label :email %></span><br />
       <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
     </div>
 
     <div class="field">
-      <%= f.label :password %><br />
+      <span class="inp_label"><%= f.label :password %></span><br />
       <%= f.password_field :password, autocomplete: "current-password" %>
     </div>
 
@@ -22,11 +22,13 @@
     <% end %>
 
     <div class="actions">
-      <%= f.submit "Log in" %>
+      <span id="login_btn"><%= f.submit "Log in" %></span>
     </div>
 
   <% end %>
 
   <%= render "devise/shared/links" %>
+</div>
+<div id="log_in_container">
 </div>
 <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
