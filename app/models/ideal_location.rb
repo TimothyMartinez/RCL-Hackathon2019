@@ -1,0 +1,2 @@
+class IdealLocation < ApplicationRecord
+end

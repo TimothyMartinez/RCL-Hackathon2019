@@ -1,135 +1,165 @@
-<<<<<<< HEAD
-Started GET "/" for ::1 at 2019-09-22 16:02:56 -0400
-  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
-Processing by Rails::WelcomeController#index as HTML
-  Rendering /home/anthony/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb
-  Rendered /home/anthony/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.0ms | Allocations: 480)
-Completed 200 OK in 12ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 2807)
-
-
-=======
-Started GET "/" for ::1 at 2019-09-22 15:29:46 -0400
-  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
-Processing by Rails::WelcomeController#index as HTML
-  Rendering /home/timartin/.rvm/gems/ruby-2.6.3/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb
-  Rendered /home/timartin/.rvm/gems/ruby-2.6.3/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.3ms | Allocations: 479)
-Completed 200 OK in 16ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 2877)
-
-
-  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
-  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
-  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
-  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-09-22 19:35:48.502201"], ["updated_at", "2019-09-22 19:35:48.502201"]]
-  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Migrating to DeviseCreateUsers (20190922194139)
+Migrating to DeviseCreateUsers (20190922215107)
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "name" varchar, "url" varchar, "job" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
   [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
-  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
-  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190922194139"]]
-  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190922215107"]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-09-22 21:51:37.126616"], ["updated_at", "2019-09-22 21:51:37.126616"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Started GET "/" for ::1 at 2019-09-22 15:46:52 -0400
-  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
-  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Processing by Rails::WelcomeController#index as HTML
-  Rendering /home/timartin/.rvm/gems/ruby-2.6.3/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb
-  Rendered /home/timartin/.rvm/gems/ruby-2.6.3/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.4ms | Allocations: 316)
-Completed 200 OK in 11ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 1854)
-
-
-Started GET "/rails/info/routes" for ::1 at 2019-09-22 15:46:58 -0400
-Processing by Rails::InfoController#routes as HTML
-  Rendering /home/timartin/.rvm/gems/ruby-2.6.3/gems/railties-6.0.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application
-  Rendered collection of /home/timartin/.rvm/gems/ruby-2.6.3/gems/actionpack-6.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [34 times] (Duration: 25.7ms | Allocations: 4864)
-  Rendered /home/timartin/.rvm/gems/ruby-2.6.3/gems/actionpack-6.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 6.4ms | Allocations: 1185)
-  Rendered /home/timartin/.rvm/gems/ruby-2.6.3/gems/railties-6.0.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 57.2ms | Allocations: 9022)
-Completed 200 OK in 62ms (Views: 60.7ms | ActiveRecord: 0.0ms | Allocations: 10459)
-
-
-Started GET "/users/sign_in" for ::1 at 2019-09-22 15:49:31 -0400
-  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2019-09-22 17:52:16 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/timartin/.rvm/gems/ruby-2.6.4/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/timartin/.rvm/gems/ruby-2.6.4/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.3ms | Allocations: 472)
+Completed 200 OK in 22ms (Views: 14.7ms | ActiveRecord: 0.0ms | Allocations: 3012)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-09-22 17:52:23 -0400
 Processing by Devise::SessionsController#new as HTML
-  Rendering devise/sessions/new.html.erb within layouts/application
-  Rendered devise/shared/_links.html.erb (Duration: 1.6ms | Allocations: 640)
-  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 31.4ms | Allocations: 8998)
+  Rendering /home/timartin/.rvm/gems/ruby-2.6.4/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/timartin/.rvm/gems/ruby-2.6.4/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (Duration: 4.3ms | Allocations: 615)
+  Rendered /home/timartin/.rvm/gems/ruby-2.6.4/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 90.9ms | Allocations: 9094)
 [Webpacker] Compiling…
-[Webpacker] Compiled all packs in /home/timartin/My Projects/RCL-Hackathon2019/public/packs
-Completed 200 OK in 4118ms (Views: 4098.2ms | ActiveRecord: 2.4ms | Allocations: 1270492)
+[Webpacker] Compiled all packs in /home/timartin/My Projects/RCL-Hackathon2019/messenger/public/packs
+Completed 200 OK in 4552ms (Views: 4522.6ms | ActiveRecord: 0.8ms | Allocations: 1274772)
 
 
-  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
-  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
-Started GET "/users/sign_up" for ::1 at 2019-09-22 15:53:27 -0400
+Started GET "/users/sign_up" for ::1 at 2019-09-22 17:52:34 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /home/timartin/.rvm/gems/ruby-2.6.4/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /home/timartin/.rvm/gems/ruby-2.6.4/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (Duration: 2.0ms | Allocations: 204)
+  Rendered /home/timartin/.rvm/gems/ruby-2.6.4/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 124)
+  Rendered /home/timartin/.rvm/gems/ruby-2.6.4/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application (Duration: 10.9ms | Allocations: 1939)
+Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.0ms | Allocations: 7951)
+
+
+Started GET "/rails/info/routes" for ::1 at 2019-09-22 17:54:01 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::InfoController#routes as HTML
+  Rendering /home/timartin/.rvm/gems/ruby-2.6.4/gems/railties-6.0.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /home/timartin/.rvm/gems/ruby-2.6.4/gems/actionpack-6.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [35 times] (Duration: 33.5ms | Allocations: 4987)
+  Rendered /home/timartin/.rvm/gems/ruby-2.6.4/gems/actionpack-6.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 5.3ms | Allocations: 1019)
+  Rendered /home/timartin/.rvm/gems/ruby-2.6.4/gems/railties-6.0.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 50.4ms | Allocations: 9164)
+Completed 200 OK in 64ms (Views: 54.0ms | ActiveRecord: 0.0ms | Allocations: 11542)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-09-22 17:58:41 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by Devise::RegistrationsController#new as HTML
   Rendering devise/registrations/new.html.erb within layouts/application
-  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 215)
-  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 124)
-  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1868)
-Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 6682)
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.3ms | Allocations: 277)
+  Rendered devise/shared/_links.html.erb (Duration: 4.3ms | Allocations: 544)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 33.0ms | Allocations: 5689)
+Completed 200 OK in 1034ms (Views: 1017.0ms | ActiveRecord: 1.6ms | Allocations: 1263457)
 
 
-Started POST "/users" for ::1 at 2019-09-22 15:53:48 -0400
+Started POST "/users" for ::1 at 2019-09-22 17:58:55 -0400
 Processing by Devise::RegistrationsController#create as HTML
-  Parameters: {"authenticity_token"=>"5Zc9Tl6RDV9iDADA1ZNB+6ZwXC54OG63a+47HM+GayEI1EA/9UbHwd6iw7Uej1wZgVf6mRr8LcOaIZO0KKKwpQ==", "user"=>{"email"=>"user@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
-  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user@email.com"], ["LIMIT", 1]]
+  Parameters: {"authenticity_token"=>"hzSmDWKVd7KpQFStvmcM+UVxmZ2DMhUXDMK/q5JIouf65ryhxHAu/vA9bDckbHGXXZtCqOMEi2ceCML2XF7clg==", "user"=>{"email"=>"tmrcmartinez@gmail.com", "name"=>"Timothy Martinez", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+[31mUnpermitted parameter: :name[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "tmrcmartinez@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "tmrcmartinez@gmail.com"], ["encrypted_password", "$2a$11$NAQwumfIdaCpd99DyVfdf.5e1vKdNI8Bz0WetN9WDu9XEaQhwOqhe"], ["created_at", "2019-09-22 21:58:55.314131"], ["updated_at", "2019-09-22 21:58:55.314131"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 131ms (ActiveRecord: 2.7ms | Allocations: 12120)
+
+
+Started GET "/" for ::1 at 2019-09-22 17:58:55 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/timartin/.rvm/gems/ruby-2.6.4/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/timartin/.rvm/gems/ruby-2.6.4/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.6ms | Allocations: 194)
+Completed 200 OK in 10ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 1272)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for ::1 at 2019-09-22 18:01:29 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/timartin/.rvm/gems/ruby-2.6.4/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/timartin/.rvm/gems/ruby-2.6.4/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.1ms | Allocations: 185)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.0ms | Allocations: 1204)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-09-22 18:02:02 -0400
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 602)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.9ms | Allocations: 2239)
+Completed 200 OK in 27ms (Views: 21.2ms | ActiveRecord: 0.7ms | Allocations: 10413)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-09-22 18:02:04 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 197)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 79)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1956)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.0ms | Allocations: 7826)
+
+
+Started POST "/users" for ::1 at 2019-09-22 18:02:30 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"pqDTNOsunV4+0LzKcdSiLuRzUcx3Mf/W9iuuQakp9/jbYPWhlL/rmtRhpZngshNRkFTTyY2Oebr2S/OdLM8uNw==", "user"=>{"email"=>"tim", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "tim"], ["LIMIT", 1]]
   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
   Rendering devise/registrations/new.html.erb within layouts/application
-  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 225)
-  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 77)
-  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1269)
-Completed 200 OK in 130ms (Views: 8.1ms | ActiveRecord: 0.5ms | Allocations: 14580)
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 226)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 77)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1487)
+Completed 200 OK in 121ms (Views: 11.8ms | ActiveRecord: 0.4ms | Allocations: 13306)
 
 
-Started POST "/users" for ::1 at 2019-09-22 15:53:58 -0400
+Started POST "/users" for ::1 at 2019-09-22 18:02:50 -0400
 Processing by Devise::RegistrationsController#create as HTML
-  Parameters: {"authenticity_token"=>"kI8T4hmCgSVyGYJTiKwsvW+4Q2K05QK8oCIZi4SaFSHqzOwZFEhcTSzfxR5gnVaSfOz5Z+7F5PKv/seCZVF21w==", "user"=>{"email"=>"user@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Parameters: {"authenticity_token"=>"aAt78vf/YsrNgOgxpd7EnKy/z0r88tJRK8tPxpYqZYQV2WFeURo7hpT90Ks/1bnytFUUf5zETCE5ATKbWDwb9Q==", "user"=>{"email"=>"tim", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user@email.com"], ["LIMIT", 1]]
-  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "user@email.com"], ["encrypted_password", "$2a$11$0WZ980NdEc7BKEUwHdq5D.bYjmdDliL/1MqMD/FK5ejCrq8eniRG."], ["created_at", "2019-09-22 19:53:58.958688"], ["updated_at", "2019-09-22 19:53:58.958688"]]
-  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
-Redirected to http://localhost:3000/
-Completed 302 Found in 119ms (ActiveRecord: 3.6ms | Allocations: 7932)
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "tim"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 213)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 77)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1468)
+Completed 200 OK in 131ms (Views: 14.3ms | ActiveRecord: 0.6ms | Allocations: 12101)
 
 
-Started GET "/" for ::1 at 2019-09-22 15:53:58 -0400
-Processing by Rails::WelcomeController#index as HTML
-  Rendering /home/timartin/.rvm/gems/ruby-2.6.3/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb
-  Rendered /home/timartin/.rvm/gems/ruby-2.6.3/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.6ms | Allocations: 199)
-Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 1114)
+Started POST "/users" for ::1 at 2019-09-22 18:03:11 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"4W0dsKUCQUHHEwbM9/c67x/RWCY2+JxD+DYakXNQXfOcvwccA+cYDZ5uPlZt/EeBBzuDE1bOAjPq/GfMvUYjgg==", "user"=>{"email"=>"tim", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "tim"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 213)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 77)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1467)
+Completed 200 OK in 120ms (Views: 11.1ms | ActiveRecord: 0.5ms | Allocations: 12090)
 
 
-  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
->>>>>>> 31483dd680d0a24bcb2c7d7020b67c6f6e3c1e2e
-Started GET "/" for ::1 at 2019-09-22 16:07:10 -0400
-  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/users" for ::1 at 2019-09-22 18:03:35 -0400
   
-ActiveRecord::PendingMigrationError (
-
-Migrations are pending. To resolve this issue, run:
-
-        rails db:migrate RAILS_ENV=development
-
-):
+ActionController::RoutingError (No route matches [GET] "/users"):
   
-activerecord (6.0.0) lib/active_record/migration.rb:587:in `check_pending!'
-activerecord (6.0.0) lib/active_record/migration.rb:564:in `call'
-actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
-activesupport (6.0.0) lib/active_support/callbacks.rb:101:in `run_callbacks'
-actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
-actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (6.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
-actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
 web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
 web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
 web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
@@ -159,6 +189,64 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_in" for ::1 at 2019-09-22 18:03:39 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 523)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1900)
+Completed 200 OK in 20ms (Views: 17.3ms | ActiveRecord: 0.0ms | Allocations: 8622)
+
+
+Started POST "/users" for ::1 at 2019-09-22 18:04:15 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"bZpz2HZDu6MPzIoQK/ZVFOYDDciXKump95Lu/FXQa50QSGl00Kbi71axsoqx/Sh6/unW/fccd9nlWJOhm8YV7A==", "user"=>{"email"=>"tim", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "tim"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.0ms | Allocations: 395)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 80)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.5ms | Allocations: 2153)
+Completed 200 OK in 125ms (Views: 13.9ms | ActiveRecord: 0.5ms | Allocations: 14548)
+
+
+Started GET "/users" for ::1 at 2019-09-22 18:04:29 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/" for ::1 at 2019-09-22 17:28:53 -0400
   [1m[35m (2.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   
@@ -1419,3 +1507,188 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 594)
 
 
+=======
+Started GET "/users/sign_in" for ::1 at 2019-09-22 18:04:33 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.3ms | Allocations: 617)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 17.4ms | Allocations: 4629)
+Completed 200 OK in 1140ms (Views: 1096.9ms | ActiveRecord: 1.3ms | Allocations: 1261136)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-09-22 18:04:37 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.9ms | Allocations: 205)
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 124)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 10.9ms | Allocations: 2133)
+Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 0.0ms | Allocations: 8064)
+
+
+Started POST "/users" for ::1 at 2019-09-22 18:04:55 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"b3nrJfzGj/fEPEnfobD+5qe35UzAeK97MVOtrhTKaOgSuc2wg1f5My6NUIww1k+Z05BnSTrHKRcxM/BykSyxJw==", "user"=>{"email"=>"emailss@emailss.com", "name"=>"tim", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+[31mUnpermitted parameter: :name[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "emailss@emailss.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "emailss@emailss.com"], ["encrypted_password", "$2a$11$Iyx6fiINNppxStVLZTyw5.Ds83C6SPRZP94t58grzL0qsx28rXCzG"], ["created_at", "2019-09-22 22:04:55.974376"], ["updated_at", "2019-09-22 22:04:55.974376"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 124ms (ActiveRecord: 2.7ms | Allocations: 10585)
+
+
+Started GET "/" for ::1 at 2019-09-22 18:04:55 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/timartin/.rvm/gems/ruby-2.6.4/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/timartin/.rvm/gems/ruby-2.6.4/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.8ms | Allocations: 190)
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 1274)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 2]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/users/sign_in" for ::1 at 2019-09-22 18:07:54 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 534)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1945)
+Completed 200 OK in 37ms (Views: 18.2ms | ActiveRecord: 1.9ms | Allocations: 17268)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-09-22 18:07:56 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.8ms | Allocations: 197)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 90)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1966)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.0ms | Allocations: 7942)
+
+
+Started POST "/users" for ::1 at 2019-09-22 18:08:08 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"EnEM4zMBLS7N2RR8B0/hrLBj5qQzPmiqmlnz4qZrt2BvsSp2TJBb6idoDS+WKVDTxERkocmB7saaOa4+I41urw==", "user"=>{"email"=>"tmrcmartinez@gmail.com", "name"=>"tim", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+[31mUnpermitted parameter: :name[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "tmrcmartinez@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (2.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "tmrcmartinez@gmail.com"], ["encrypted_password", "$2a$11$y/NSw7F7BXZMpfGlhsOgkuTCSu6GZMFlrLFWP20LggcFf2ab8Pzgu"], ["created_at", "2019-09-22 22:08:08.803934"], ["updated_at", "2019-09-22 22:08:08.803934"]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 160ms (ActiveRecord: 5.9ms | Allocations: 9424)
+
+
+Started GET "/" for ::1 at 2019-09-22 18:08:08 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/timartin/.rvm/gems/ruby-2.6.4/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/timartin/.rvm/gems/ruby-2.6.4/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.0ms | Allocations: 187)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 1186)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (1.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/users/sign_in" for ::1 at 2019-09-22 18:09:37 -0400
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 621)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.3ms | Allocations: 4867)
+Completed 200 OK in 1071ms (Views: 1011.7ms | ActiveRecord: 1.3ms | Allocations: 1263864)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-09-22 18:09:40 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.8ms | Allocations: 206)
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 124)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 7.2ms | Allocations: 2134)
+Completed 200 OK in 21ms (Views: 18.5ms | ActiveRecord: 0.0ms | Allocations: 8100)
+
+
+Started POST "/users" for ::1 at 2019-09-22 18:09:51 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"9QsV27RRNhfrBjf6yOYt2YDgTR6IKnCM6jNID3x6ZLKIyzNOy8BA0wG3LqlZgJym9MfPG3KV9uDqUxXT+Zy9fQ==", "user"=>{"email"=>"tmrcmartinez@gmail.com", "name"=>"tim", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "tmrcmartinez@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "tmrcmartinez@gmail.com"], ["encrypted_password", "$2a$11$W5HzampoAWgx8guozQ1CqeRduLI2NANHxwAAzi5zxWPNc1htASMve"], ["name", "tim"], ["created_at", "2019-09-22 22:09:51.331297"], ["updated_at", "2019-09-22 22:09:51.331297"]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 122ms (ActiveRecord: 3.3ms | Allocations: 10516)
+
+
+Started GET "/" for ::1 at 2019-09-22 18:09:51 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/timartin/.rvm/gems/ruby-2.6.4/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/timartin/.rvm/gems/ruby-2.6.4/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.3ms | Allocations: 190)
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 1253)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 4]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/users/sign_in" for ::1 at 2019-09-22 18:12:07 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.6ms | Allocations: 534)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1945)
+Completed 200 OK in 49ms (Views: 22.0ms | ActiveRecord: 1.8ms | Allocations: 17301)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-09-22 18:12:09 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.1ms | Allocations: 197)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 90)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 8.3ms | Allocations: 2499)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.0ms | Allocations: 8449)
+
+
+Started POST "/users" for ::1 at 2019-09-22 18:12:31 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"toReA/Rog2UFaMGTmDvBbfxkmSySvDBkmQ/uam4eu3bLRHiWi/n1oe/Z2MAJXXASiEMbKWgDtgiZb7O26/hiuQ==", "user"=>{"email"=>"tmrcmartinez@gmail.com", "name"=>"tim", "job"=>"cook", "url"=>"someimg@site.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "tmrcmartinez@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "name", "url", "job", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "tmrcmartinez@gmail.com"], ["encrypted_password", "$2a$11$niuNTZlaiHRH32rpzN2yy./3VCYE9hmg6Jfwnt/jGM.o/s1sJOxNu"], ["name", "tim"], ["url", "someimg@site.com"], ["job", "cook"], ["created_at", "2019-09-22 22:12:31.272292"], ["updated_at", "2019-09-22 22:12:31.272292"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 120ms (ActiveRecord: 2.6ms | Allocations: 9451)
+
+
+Started GET "/" for ::1 at 2019-09-22 18:12:31 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/timartin/.rvm/gems/ruby-2.6.4/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/timartin/.rvm/gems/ruby-2.6.4/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.4ms | Allocations: 184)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.0ms | Allocations: 1198)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mIdealLocation Load (0.7ms)[0m  [1m[34mSELECT "ideal_locations".* FROM "ideal_locations" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (11.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateIdealLocations (20190922223334)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "ideal_locations" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "first" varchar, "second" varchar, "third" varchar, "fourth" varchar, "fifth" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190922223334"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mIdealLocation Load (0.5ms)[0m  [1m[34mSELECT "ideal_locations".* FROM "ideal_locations" LIMIT ?[0m  [["LIMIT", 11]]
+>>>>>>> 3831f93c22f15517d1fc6603b4f9d44c6bf74893
