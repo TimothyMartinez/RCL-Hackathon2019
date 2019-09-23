@@ -1,18 +1,50 @@
-<%= form_for @user %>
-  <label>First</label><br>
-  <%= text_field_tag :first %><br>
+<%#= form_for @user %>
+  <%# <label>First</label><br> %>
+  <%# = text_field_tag :first<br> %>
 
-  <label>Second</label><br>
-  <%= text_field_tag :second %><br>
+  <%# <label>Second</label><br> %>
+  <%# = text_field_tag :second<br> %>
 
-  <label>Third</label><br>
-  <%= text_field_tag :third %><br>
+  <%# <label>Third</label><br> %>
+  <%# = text_field_tag :third<br> %>
 
-  <label>Fourth</label><br>
-  <%= text_field_tag :fourth %><br>
+  <%# <label>Fourth</label><br> %>
+  <%# = text_field_tag :fourth<br> %>
 
-  <label>Fifth</label><br>
-  <%= text_field_tag :fifth %><br>
+  <%# <label>Fifth</label><br> %>
+  <%# = text_field_tag :fifth<br> %>
 
-  <%= submit_tag "Submit" %>
+  <%#= submit_tag "Submit" %>
+<%# end %>
+
+
+<%= form_with model: @users do |f| %>
+  <div class="field">
+    <%= f.label :first %><br />
+    <%= f.text_field :first, autocomplete: "First" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :second %><br />
+    <%= f.text_field :second, autocomplete: "First" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :third %><br />
+    <%= f.text_field :third, autocomplete: "Third" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fourth %><br />
+    <%= f.text_field :fourth, autocomplete: "fourth" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fifth %><br />
+    <%= f.text_field :fifth, autocomplete: "fifth" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Update" %>
+  </div>
 <% end %>
